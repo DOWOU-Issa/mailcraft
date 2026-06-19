@@ -257,3 +257,38 @@ button:active:not(:disabled),
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
+
+
+/* Drag and Drop Animations */
+@keyframes dragEnter {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: oklch(0.65 0.22 30 / 0.05);
+  }
+}
+
+@keyframes dragLift {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.drag-enter {
+  animation: dragEnter 0.2s ease-out forwards;
+}
+
+.drag-lift {
+  animation: dragLift 0.2s ease-out forwards;
+}
+
+/* Smooth transitions for drag elements */
+[data-rbd-draggable-context-id] {
+  transition: background-color 0.2s ease-out;
+}
