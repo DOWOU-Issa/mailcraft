@@ -254,4 +254,4 @@ Pour toute question ou problème, veuillez :
 
 ---
 
-**Fait avec ❤️ par DOWOU Issa**
+**Fait  par DOWOU Issa**
